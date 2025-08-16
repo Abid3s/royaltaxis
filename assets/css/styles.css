@@ -1,0 +1,230 @@
+/* Custom styles for Royal Taxis */
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Header enhancements */
+.header-nav a {
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.header-nav a:hover {
+  color: var(--color-royal-gold);
+}
+
+.header-nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 50%;
+  background-color: var(--color-royal-gold);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.header-nav a:hover::after {
+  width: 100%;
+}
+
+/* Hero section animations */
+.hero-content {
+  animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Button hover effects */
+.btn-primary {
+  background: linear-gradient(135deg, var(--color-royal-gold), #f4d03f);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+}
+
+.btn-secondary {
+  background: var(--color-royal-blue);
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: #0a1a4f;
+  transform: translateY(-1px);
+}
+
+/* Form enhancements */
+.form-input {
+  transition: all 0.3s ease;
+  border: 2px solid #e5e7eb;
+}
+
+.form-input:focus {
+  border-color: var(--color-royal-gold);
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+  outline: none;
+}
+
+/* Service cards */
+.service-card {
+  transition: all 0.3s ease;
+  border: 1px solid #e5e7eb;
+  background: white;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-color: var(--color-royal-gold);
+}
+
+/* Fleet cards */
+.fleet-card {
+  transition: all 0.3s ease;
+  background: white;
+  border: 1px solid #e5e7eb;
+}
+
+.fleet-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Features section */
+.feature-icon {
+  background: linear-gradient(135deg, var(--color-royal-blue), #1e40af);
+  transition: all 0.3s ease;
+}
+
+.feature-item:hover .feature-icon {
+  transform: scale(1.1);
+}
+
+/* Testimonials */
+.testimonial-card {
+  background: white;
+  border-left: 4px solid var(--color-royal-gold);
+  transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateX(5px);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact section */
+.contact-info {
+  background: linear-gradient(135deg, var(--color-royal-blue), #1e40af);
+}
+
+/* Mobile menu */
+.mobile-menu {
+  display: none;
+}
+
+.mobile-menu.active {
+  display: block;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none;
+  }
+  
+  .mobile-menu-btn {
+    display: block;
+  }
+  
+  .hero h2 {
+    font-size: 2rem;
+  }
+  
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .fleet-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+/* Loading animation */
+.loading {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Success message */
+.success-message {
+  background: #10b981;
+  color: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  display: none;
+}
+
+.success-message.show {
+  display: block;
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Price display */
+.price-display {
+  background: var(--color-royal-gold);
+  color: var(--color-royal-blue);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  font-size: 1.25rem;
+  text-align: center;
+  margin-top: 1rem;
+  display: none;
+}
+
+.price-display.show {
+  display: block;
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
