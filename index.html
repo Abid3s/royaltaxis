@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Royal Taxis</title>
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-800">
+  <header class="bg-[var(--color-royal-blue)] text-white p-4">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Royal Taxis</h1>
+      <nav>
+        <a href="#services" class="mx-2">Services</a>
+        <a href="#fleet" class="mx-2">Fleet</a>
+        <a href="#contact" class="mx-2">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <section class="hero bg-gray-100 py-20 text-center">
+    <h2 class="text-4xl font-bold mb-4">Your Ride. On Time, Every Time.</h2>
+    <p class="mb-8">Open 24/7 · DBS-Checked · Card & Contactless · Established 2005</p>
+    <a href="#quote" class="bg-[var(--color-royal-gold)] text-black py-3 px-6 rounded">Get Instant Quote</a>
+  </section>
+  <section id="quote" class="py-16">
+    <div class="container mx-auto max-w-xl">
+      <form class="grid gap-4" action="#" method="post">
+        <input type="text" placeholder="Pickup" class="border p-2" required>
+        <input type="text" placeholder="Drop-off" class="border p-2" required>
+        <input type="date" class="border p-2" required>
+        <input type="time" class="border p-2" required>
+        <input type="number" placeholder="Passengers" class="border p-2" required>
+        <input type="number" placeholder="Luggage" class="border p-2">
+        <select class="border p-2">
+          <option>Saloon</option>
+          <option>Estate</option>
+          <option>MPV</option>
+        </select>
+        <button type="submit" class="bg-[var(--color-royal-blue)] text-white py-2">Submit</button>
+      </form>
+    </div>
+  </section>
+  <section id="services" class="py-16 bg-gray-100">
+    <div class="container mx-auto">
+      <h3 class="text-2xl font-bold mb-4">Services</h3>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="p-4 border rounded">Airport Transfers</div>
+        <div class="p-4 border rounded">School Contracts</div>
+        <div class="p-4 border rounded">Social & Special Events</div>
+      </div>
+    </div>
+  </section>
+  <section id="fleet" class="py-16">
+    <div class="container mx-auto">
+      <h3 class="text-2xl font-bold mb-4">Fleet</h3>
+      <p>Saloon, Estate, MPV, WAV, 8-Seater, 16-Seater, E7.</p>
+    </div>
+  </section>
+  <section id="contact" class="py-16 bg-gray-100">
+    <div class="container mx-auto">
+      <h3 class="text-2xl font-bold mb-4">Contact</h3>
+      <p>Address: 3/4 Benner Road, Spalding, Lincs, PE11 3TZ</p>
+      <p>Phone: 01775 714 714</p>
+      <p>Email: <a href="mailto:royaltaxis@live.co.uk" class="text-blue-600">royaltaxis@live.co.uk</a></p>
+    </div>
+  </section>
+  <footer class="bg-[var(--color-royal-blue)] text-white p-4 text-center">
+    <p>&copy; <span id="year"></span> Royal Taxis. All rights reserved.</p>
+  </footer>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
